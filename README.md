@@ -15,6 +15,8 @@ Four detectors run against each commit, each producing findings at a confidence 
 **Medium confidence** -- patterns in the commit message itself:
 - `aider:` prefix (Aider's default commit format).
 - `Generated with Claude Code` footer.
+- Known commit trailers in formats unique to specific tools (such as EntireIO and Replit) that can contain values indicative of AI use
+
 
 **Low confidence** -- mentions of AI tool names in text:
 - Word-boundary matches for tool names like Claude, Copilot, Cursor, Aider, ChatGPT, Windsurf, Devin, etc. This detector also runs against commit messages, and is the primary detector for the text-scanning mode (PR bodies, comments).
